@@ -16,6 +16,7 @@ window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
+  event.preventDefault()
 };
 
 // Local Storage
@@ -29,6 +30,7 @@ if(mailInput) {
 
 mailInput.addEventListener("input", letter => {
   text.textContent = letter.target.value
+  
 });
 
 const saveToLocalStorage = () => {
@@ -36,6 +38,9 @@ const saveToLocalStorage = () => {
 }
 
 btn.addEventListener('click', saveToLocalStorage);
+
+
+
 
 
 
